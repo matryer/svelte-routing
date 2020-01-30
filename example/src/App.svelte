@@ -7,6 +7,15 @@
 
   // Used for SSR. A falsy value is ignored by the Router.
   export let url = "";
+
+  import { onMount, onDestroy } from 'svelte';
+  onMount(() => {
+    console.info('App: onMount')
+    onDestroy(() => {
+      console.info('App: onDestroy')
+    })
+  })
+
 </script>
 
 <Router url="{url}">

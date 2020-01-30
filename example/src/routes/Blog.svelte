@@ -1,5 +1,14 @@
 <script>
   import { Router, Link, Route } from "svelte-routing";
+
+  import { onMount, onDestroy } from 'svelte';
+  onMount(() => {
+    console.info('Blog: onMount')
+    onDestroy(() => {
+      console.info('Blog: onDestroy')
+    })
+  })
+
 </script>
 
 <Router>
